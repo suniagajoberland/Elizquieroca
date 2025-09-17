@@ -1,0 +1,101 @@
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+/* Fondo con imagen y overlay */
+.background {
+  background-image: url("img/logo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+/* Contenido */
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.logo {
+  max-width: 150px;
+  margin: 0 auto 1rem auto;
+}
+.btn {
+  background-color: #25d366;
+  border: none;
+  padding: 1rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+.btn.download {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn.mercadolibre {
+  background-color: #ffdb20;
+  color: #000;
+}
+.btn.instagram {
+  background-color: #e4405f;
+}
+.btn.email {
+  background-color: #0077b5;
+}
+.btn:hover {
+  filter: brightness(85%);
+}
+.soporte {
+  margin-top: 1rem;
+  background-color: rgba(255 255 255 / 0.15);
+  padding: 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #eee;
+}
+@media (max-width: 480px) {
+  .content {
+    max-width: 100%;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 25px;
+  }
+  .logo {
+    max-width: 120px;
+  }
+}
