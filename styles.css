@@ -4,12 +4,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body,
 html {
   height: 100%;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   color: #fff;
+  overflow: hidden;
 }
+
 /* Fondo con imagen y overlay */
 .background {
   background-image: url("");
@@ -17,13 +21,14 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
+  min-height: 100vh;
 }
+
 .background::before {
   content: "";
   position: absolute;
@@ -33,6 +38,7 @@ html {
   height: 100%;
   z-index: 0;
 }
+
 /* Contenido */
 .content {
   position: relative;
@@ -44,11 +50,16 @@ html {
   flex-direction: column;
   gap: 1.2rem;
 }
+
 .logo {
-  max-width: 300px;
+  max-width: 100%;
+  height: auto;
   margin: 50px auto 1rem auto;
 }
+
 .btn {
+  max-width: 100%;
+  height: auto;
   background-color: #25d366;
   border: none;
   padding: 1rem;
@@ -59,23 +70,29 @@ html {
   transition: background-color 0.3s ease;
   display: block;
 }
+
 .btn.download {
   background-color: #007bff;
   color: #fff;
 }
+
 .btn.mercadolibre {
   background-color: #ffdb20;
   color: #000;
 }
+
 .btn.instagram {
   background-color: #e4405f;
 }
+
 .btn.email {
   background-color: #0077b5;
 }
+
 .btn:hover {
   filter: brightness(85%);
 }
+
 .soporte {
   margin-top: 1rem;
   background-color: rgba(5, 2, 2, 0.15);
@@ -85,6 +102,7 @@ html {
   color: #000000;
   margin-bottom: 15px;
 }
+
 @media (max-width: 480px) {
   .content {
     max-width: 100%;
@@ -95,6 +113,6 @@ html {
     border-radius: 25px;
   }
   .logo {
-    max-width: 300px;
+    max-width: 100%;
   }
 }
